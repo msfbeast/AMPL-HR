@@ -1,0 +1,5 @@
+{
+  "name": "Recruitment Sandbox",
+  "description": "An AI-powered app to streamline recruitment. Input raw job notes to generate polished LinkedIn job descriptions and tailored interview questions. Includes a general-purpose chatbot for additional queries.",
+  "requestFramePermissions": []
+}
