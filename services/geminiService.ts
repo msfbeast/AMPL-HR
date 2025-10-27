@@ -2,11 +2,14 @@
 import { GoogleGenAI, Type, Chat } from "@google/genai";
 import type { HiringKit, OnboardingPlan, ResumeAnalysis, ScorecardItem } from '../types';
 
-if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable not set");
+// Get API key from environment with fallbacks
+const apiKey = process.env.API_KEY || process.env.GEMINI_API_KEY || (window as any).GEMINI_API_KEY;
+
+if (!apiKey) {
+    throw new Error("API_KEY or GEMINI_API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey });
 
 const hiringKitSchema = {
   type: Type.OBJECT,
