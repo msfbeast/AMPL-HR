@@ -1,0 +1,12 @@
+Deployment Instructions:
+1. Go to https://vercel.com/new
+2. Sign in with your GitHub account
+3. Import your repository (msfbeast/AMPL-HR)
+4. Configure the project with these settings:
+   - Framework Preset: Vite
+   - Build Command: npm run build
+   - Output Directory: dist
+5. Add environment variable:
+   - Name: GEMINI_API_KEY
+   - Value: YOUR_GEMINI_API_KEY (get from https://aistudio.google.com/app/apikey)
+6. Click 'Deploy'
