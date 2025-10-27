@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
     // Load from .env files
     const env = loadEnv(mode, process.cwd(), '');
     // Also get from process.env (for Vercel builds)
-    const apiKey = env.GEMINI_API_KEY || env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
+    const apiKey = env.GEMINI_API_KEY || env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY || 'AIzaSyCvp_R5KLU4X0ofSunxklm5GJiqaDCQ0gI';
     
     return {
       server: {
